@@ -1,0 +1,64 @@
+
+    body {
+        font-family: Arial, 'メイリオ', sans-serif;
+        text-align: center;
+    }
+
+    #timerText {
+        color: #00aaff;
+        font-size: 148px;
+        margin: 30px auto;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    select {
+        font-size: 18px;
+        padding: 3px;
+    }
+
+    .btn {
+        margin-left: 5px;
+        display: inline-block;
+        font-weight: bold;
+        width: 60px;
+        padding: 0.5px;
+        border-radius: 5px;
+        box-shadow: 0 2px 0 #CDC9C9;
+        background: #EEE9E9;
+        cursor: pointer;
+    }
+
+    .delete_btn {
+        margin-left: 15px;
+        font-weight: bold;
+        width: 60px;
+        padding: 3px;
+        border-radius: 5px;
+        background: #FF4500;
+        box-shadow: 0 2px 0 red;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .container {
+        text-align: left;
+        padding: 15px;
+        margin: 0 auto;
+        background: #e0e0e0;
+        width: 350px;
+        height: 190px;
+    }
+
+    .container p {
+        font-size: 16px;
+        margin: 5px;
+
+    }
+
+    .container li {
+        margin-bottom: 7px;
+    }
