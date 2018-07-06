@@ -1,5 +1,5 @@
 setInterval(clock, 1000);
-setInterval(showTime, 1000);
+setInterval(getData, 1000);
 
 function clock() {
     var weeks = new Array("Sun", "Mon", "Thu", "Wed", "Thr", "Fri", "Sat"); //曜日を出力
@@ -22,14 +22,18 @@ function clock() {
     document.getElementById("clock_frame").style.fontSize = window.innerWidth / 10 + "px";
 }
 
-function showTime() {
+function getData() {
     //var get_time = document.getElementById('clock_time'); // HTML要素オブジェクトを取得
     // console.log(get_time); //[object HTMLParagraphElement]  要素全てをログ出力？
+
+
+    var get_date = document.getElementById('clock_date').innerHTML;
+    console.log(get_date); //日数のみ出力
 
     var get_time = document.getElementById('clock_time').innerHTML;
     console.log(get_time); //時間のみ出力
 
     if (get_time === "16:09:10") {
-        console.log("OH!!!");
+        console.log("時間になりました。");
     }
 }
