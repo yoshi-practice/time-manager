@@ -28,11 +28,11 @@ function clock() {
     document.getElementById("clock_frame").style.fontSize = window.innerWidth / 10 + "px";
 
     if (w !== "Sun" || w !== "Sat") { // もし土曜日もしくは日曜日でないなら
-        //アラームを作動させる
+        //チャイムを作動させる
 
 
     } else {
-        // アラームを作動させない
+        // チャイムを作動させない
     }
 
 
