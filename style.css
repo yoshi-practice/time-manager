@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps);
 
+
 body {
     color: white;
     background-color: black;
@@ -12,9 +13,10 @@ div#clock_frame {
 span {
     display: block;
     float: right;
-    width: 85%;
+    width: 90%;
     /*font-family: 'Oleo Script Swash Caps', cursive;*/
     font-family: cursive;
+    margin-right: 10px;
 }
 
 span#clock_date {

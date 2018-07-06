@@ -1,5 +1,6 @@
-setInterval(clock, 1000);
-setInterval(getData, 1000);
+//setInterval(String,mmS) 1000mms = 1s
+setInterval(clock, 1000); //1秒ごとに結果を反映
+setInterval(getData, 1000); //1秒ごとに結果を反映
 
 function clock() {
     var weeks = new Array("Sun", "Mon", "Thu", "Wed", "Thr", "Fri", "Sat"); //曜日を出力
@@ -17,9 +18,24 @@ function clock() {
     if (mi < 10) mi = "0" + mi;
     if (s < 10) s = "0" + s;
 
-    document.getElementById("clock_date").innerHTML = y + "/" + mo + "/" + d + " (" + w + ")";
-    document.getElementById("clock_time").innerHTML = h + ":" + mi + ":" + s;
+    var date = y + "/" + mo + "/" + d + " (" + w + ")";
+    var time = h + ":" + mi + ":" + s;
+
+    //document.getElementById("clock_date").innerHTML = y + "/" + mo + "/" + d + " (" + w + ")";
+    //document.getElementById("clock_time").innerHTML = h + ":" + mi + ":" + s;
+    document.getElementById("clock_date").innerHTML = date;
+    document.getElementById("clock_time").innerHTML = time;
     document.getElementById("clock_frame").style.fontSize = window.innerWidth / 10 + "px";
+
+    if (w !== "Sun" || w !== "Sat") { // もし土曜日もしくは日曜日でないなら
+        //アラームを作動させる
+
+
+    } else {
+        // アラームを作動させない
+    }
+
+
 }
 
 function getData() {
