@@ -30,9 +30,39 @@ function clock() {
     if (w !== "Sun" || w !== "Sat") { // もし土曜日もしくは日曜日でないなら
         //チャイムを作動させる
 
+        switch time {
+            case "09:30:00": //0限START
+            case "09:45:00": //0限END・1限START
+            case "10:35:00": //1限END・休み時間START
+            case "10:45:00": //休み時間END・2限START
+            case "11:35:00": //2限END・休み時間START 
+            case "11:45:00": //休み時間END・3限START
+            case "12:35:00": //3限END・昼休みSTART
+            case "13:15:00": //昼休みEND・4限START
+            case "14:05:00": //4限END・休み時間START 
+            case "14:15:00": //休み時間END・5限START
+            case "15:05:00": //5限END・休み時間START
+            case "15:15:00": //休み時間END・6限START
+            case "16:05:00": //6限END・終礼など
+            case "16:15:00": //休み時間END・7限START
+            case "17:05:00": //7限END
+            case "17:50:00": //下校の促し
+            case "18:00:00": //完全下校
+                console.log("チャイムを鳴らします");
+
+                //音楽を再生する
+
+                break;
+
+            default:
+                break;
+
+        }
 
     } else {
+
         // チャイムを作動させない
+
     }
 
 
@@ -49,7 +79,35 @@ function getData() {
     var get_time = document.getElementById('clock_time').innerHTML;
     console.log(get_time); //時間のみ出力
 
-    if (get_time === "16:09:10") {
-        console.log("時間になりました。");
+    if (get_time === "09:30:00") {
+        console.log("0限開始");
+    }
+
+    switch get_time {
+        case "09:30:00": //0限START
+        case "09:45:00": //0限END・1限START
+        case "10:35:00": //1限END・休み時間START
+        case "10:45:00": //休み時間END・2限START
+        case "11:35:00": //2限END・休み時間START 
+        case "11:45:00": //休み時間END・3限START
+        case "12:35:00": //3限END・昼休みSTART
+        case "13:15:00": //昼休みEND・4限START
+        case "14:05:00": //4限END・休み時間START 
+        case "14:15:00": //休み時間END・5限START
+        case "15:05:00": //5限END・休み時間START
+        case "15:15:00": //休み時間END・6限START
+        case "16:05:00": //6限END・終礼など
+        case "16:15:00": //休み時間END・7限START
+        case "17:05:00": //7限END
+        case "17:50:00": //下校の促し
+        case "18:00:00": //完全下校
+            console.log("チャイムを鳴らします");
+
+            //音楽を再生する
+
+            break;
+
+        default:
+            break;
     }
 }
