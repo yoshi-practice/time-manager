@@ -13,6 +13,7 @@ function clock() {
     var mi = now.getMinutes();
     var s = now.getSeconds();
 
+
     var dayNames = [
   'Sun',
   'Mon',
@@ -46,9 +47,11 @@ function clock() {
 
     document.getElementById("clock_date").innerHTML = y + "/" + mo + "/" + d + " (" + w + ")";
     document.getElementById("clock_time").innerHTML = h + ":" + mi + ":" + s;
+    //document.getElementById("schedule").innerHTML = date;
     //document.getElementById("clock_date").innerHTML = date;
     //document.getElementById("clock_time").innerHTML = time;
     document.getElementById("clock_frame").style.fontSize = window.innerWidth / 10 + "px";
+
 
 
 
@@ -66,39 +69,63 @@ function clock() {
 
 
     if (dayName === "Sun" || dayName === "Sat") { // もし土曜日もしくは日曜日でないなら
-        //チャイムを作動させる
-
-        console.log("休日です");
-
+        console.log("休日");
 
         // チャイムを作動させない
-
-
     } else {
-
-        console.log("平日です");
-
-
+        console.log("平日");
         switch (time) {
             case "09:30:00": //0限START
+                document.getElementById("Sound").play();
+                alert("0限目が始まりました。");
             case "09:45:00": //0限END・1限START
+                document.getElementById("Sound").play();
+                alert("1限目が始めりました。");
             case "10:35:00": //1限END・休み時間START
+                document.getElementById("Sound").play();
+                alert("1限目が終わりました。");
             case "10:45:00": //休み時間END・2限START
-            case "11:35:00": //2限END・休み時間START 
+                document.getElementById("Sound").play();
+                alert("2限目が始まりました。");
+            case "11:35:00": //2限END・休み時間START
+                document.getElementById("Sound").play();
+                alert("2限目が終わりました。");
             case "11:45:00": //休み時間END・3限START
+                document.getElementById("Sound").play();
+                alert("3限目が始まりました。");
             case "12:35:00": //3限END・昼休みSTART
+                document.getElementById("Sound").play();
+                alert("3限目が終わりました。");
             case "13:15:00": //昼休みEND・4限START
-            case "14:05:00": //4限END・休み時間START 
+                document.getElementById("Sound").play();
+                alert("4限目が始まりました。");
+            case "14:05:00": //4限END・休み時間START
+                document.getElementById("Sound").play();
+                alert("4限目が終わりました。");
             case "14:15:00": //休み時間END・5限START
+                document.getElementById("Sound").play();
+                alert("5限目が始まりました。");
             case "15:05:00": //5限END・休み時間START
+                document.getElementById("Sound").play();
+                alert("5限目が終わりました。");
             case "15:15:00": //休み時間END・6限START
+                document.getElementById("Sound").play();
+                alert("6限目が始まりました。");
             case "16:05:00": //6限END・終礼など
+                document.getElementById("Sound").play();
+                alert("6限目が終わりました。");
             case "16:15:00": //休み時間END・7限START
+                document.getElementById("Sound").play();
+                alert("7限目が始まりました。");
             case "17:05:00": //7限END
+                document.getElementById("Sound").play();
+                alert("7限目が終わりました。");
             case "17:50:00": //下校の促し
+                document.getElementById("Sound").play();
+                alert("下校する時間の10分前になりました。");
             case "18:00:00": //完全下校
-                console.log("チャイムを鳴らします");
-                document.getElementById("DiceSound").play();
+                document.getElementById("Sound").play();
+                alert("下校する時間になりました。");
 
                 //音楽を再生する
 
@@ -109,5 +136,6 @@ function clock() {
 
         }
     }
+
 
 }
