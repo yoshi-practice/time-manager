@@ -1,6 +1,5 @@
 //setInterval(String,mmS) 1000mms = 1s
 setInterval(clock, 1000); //1秒ごとに結果を反映
-setInterval(getData, 1000); //1秒ごとに結果を反映
 
 function clock() {
     var weeks = new Array("Sun", "Mon", "Thu", "Wed", "Thr", "Fri", "Sat"); //曜日を出力
@@ -13,13 +12,36 @@ function clock() {
     var mi = now.getMinutes();
     var s = now.getSeconds();
 
-    if (mo < 10) mo = "0" + mo;
-    if (d < 10) d = "0" + d;
-    if (mi < 10) mi = "0" + mi;
-    if (s < 10) s = "0" + s;
+    var dayNames = [
+  'Sun',
+  'Mon',
+  'Thu',
+  'Wed',
+  'Thr',
+  'Fri',
+  'Sat'
+];
+
+    var day = now.getDay();
+    var dayName = dayNames[day];
+    //console.log(dayName); //曜日の出力
+
+    if (mo < 10) {
+        mo = "0" + mo
+    };
+    if (d < 10) {
+        d = "0" + d;
+    }
+    if (mi < 10) {
+        mi = "0" + mi;
+    }
+    if (s < 10) {
+        s = "0" + s;
+    }
 
     var date = y + "/" + mo + "/" + d + " (" + w + ")";
     var time = h + ":" + mi + ":" + s;
+
 
     document.getElementById("clock_date").innerHTML = y + "/" + mo + "/" + d + " (" + w + ")";
     document.getElementById("clock_time").innerHTML = h + ":" + mi + ":" + s;
@@ -27,11 +49,43 @@ function clock() {
     //document.getElementById("clock_time").innerHTML = time;
     document.getElementById("clock_frame").style.fontSize = window.innerWidth / 10 + "px";
 
-    if (w !== "Sun" || w !== "Sat") { // もし土曜日もしくは日曜日でないなら
+
+
+
+
+    //var get_time = document.getElementById('clock_time'); // HTML要素オブジェクトを取得
+    // console.log(get_time); //[object HTMLParagraphElement]  要素全てをログ出力？
+
+
+    var get_date = document.getElementById('clock_date').innerHTML;
+    console.log(get_date); //日数のみ出力
+
+    var get_time = document.getElementById('clock_time').innerHTML;
+    console.log(get_time); //時間のみ出力
+
+    if (get_time === "09:30:00") {
+        console.log("0限開始");
+    }
+
+
+
+
+
+    if (dayName === "Sun" || dayName === "Sat") { // もし土曜日もしくは日曜日でないなら
         //チャイムを作動させる
 
-        /*   switch time {
-         case "09:30:00": //0限START
+        console.log("休日です");
+
+        // チャイムを作動させない
+
+
+    } else {
+
+        console.log("平日です");
+
+
+        switch (time) {
+            case "09:30:00": //0限START
             case "09:45:00": //0限END・1限START
             case "10:35:00": //1限END・休み時間START
             case "10:45:00": //休み時間END・2限START
@@ -57,57 +111,7 @@ function clock() {
             default:
                 break;
 
-        }*/
-
-    } else {
-
-        // チャイムを作動させない
-
+        }
     }
 
-
-}
-
-function getData() {
-    //var get_time = document.getElementById('clock_time'); // HTML要素オブジェクトを取得
-    // console.log(get_time); //[object HTMLParagraphElement]  要素全てをログ出力？
-
-
-    var get_date = document.getElementById('clock_date').innerHTML;
-    console.log(get_date); //日数のみ出力
-
-    var get_time = document.getElementById('clock_time').innerHTML;
-    console.log(get_time); //時間のみ出力
-
-    if (get_time === "09:30:00") {
-        console.log("0限開始");
-    }
-
-    /* switch get_time {
-         case "09:30:00": //0限START
-         case "09:45:00": //0限END・1限START
-         case "10:35:00": //1限END・休み時間START
-         case "10:45:00": //休み時間END・2限START
-         case "11:35:00": //2限END・休み時間START 
-         case "11:45:00": //休み時間END・3限START
-         case "12:35:00": //3限END・昼休みSTART
-         case "13:15:00": //昼休みEND・4限START
-         case "14:05:00": //4限END・休み時間START 
-         case "14:15:00": //休み時間END・5限START
-         case "15:05:00": //5限END・休み時間START
-         case "15:15:00": //休み時間END・6限START
-         case "16:05:00": //6限END・終礼など
-         case "16:15:00": //休み時間END・7限START
-         case "17:05:00": //7限END
-         case "17:50:00": //下校の促し
-         case "18:00:00": //完全下校
-             console.log("チャイムを鳴らします");
-
-             //音楽を再生する
-
-             break;
-
-         default:
-             break;
-     }*/
 }
