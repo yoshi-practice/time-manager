@@ -1,6 +1,7 @@
 //setInterval(String,mmS) 1000mms = 1s
 setInterval(clock, 1000); //1秒ごとに結果を反映
 
+
 function clock() {
     var weeks = new Array("Sun", "Mon", "Thu", "Wed", "Thr", "Fri", "Sat"); //曜日を出力
     var now = new Date();
@@ -63,18 +64,12 @@ function clock() {
     var get_time = document.getElementById('clock_time').innerHTML;
     console.log(get_time); //時間のみ出力
 
-    if (get_time === "09:30:00") {
-        console.log("0限開始");
-    }
-
-
-
-
 
     if (dayName === "Sun" || dayName === "Sat") { // もし土曜日もしくは日曜日でないなら
         //チャイムを作動させる
 
         console.log("休日です");
+
 
         // チャイムを作動させない
 
@@ -103,6 +98,7 @@ function clock() {
             case "17:50:00": //下校の促し
             case "18:00:00": //完全下校
                 console.log("チャイムを鳴らします");
+                document.getElementById("DiceSound").play();
 
                 //音楽を再生する
 
