@@ -1,5 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Aclonica);
-
+/*(@import url(http://fonts.googleapis.com/css?family=Aclonica);*/
 
 body {
     color: white;
@@ -14,7 +13,7 @@ span {
     display: block;
     float: right;
     width: 90%;
-    font-family: 'Aclonica', cursive;
+    font-family: cursive;
     margin-right: 10px;
 }
 
