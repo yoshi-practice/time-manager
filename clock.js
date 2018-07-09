@@ -33,18 +33,10 @@ function clock() {
 
     document.getElementById("clock_date").innerHTML = y + "/" + mo + "/" + d + " (" + w + ")";
     document.getElementById("clock_time").innerHTML = h + ":" + mi + ":" + s;
-    //document.getElementById("clock_date").innerHTML = date;
-    //document.getElementById("clock_time").innerHTML = time;
     document.getElementById("clock_frame").style.fontSize = window.innerWidth / 10 + "px";
-
-
-
-
-
 
     //var get_time = document.getElementById('clock_time'); // HTML要素オブジェクトを取得
     // console.log(get_time); //[object HTMLParagraphElement]  要素全てをログ出力？
-
 
     var get_date = document.getElementById('clock_date').innerHTML;
     console.log(get_date); //日数のみ出力
@@ -55,12 +47,8 @@ function clock() {
 
     console.log(w);
 
-    if (w === "Sun" || w === "Sat") { // もし土曜日もしくは日曜日でないなら
-        console.log("休日");
-
-        // チャイムを作動させない
-    } else {
-        console.log("平日");
+    if (w !== "Sun" || w !== "Sat") { // もし土曜日もしくは日曜日でないなら   
+        //console.log("平日");
 
         switch (time) {
             case "09:30:00": //0限START
