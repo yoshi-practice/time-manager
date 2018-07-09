@@ -48,7 +48,7 @@ function clock() {
     console.log(get_time); //時間のみ出力
 
 
-    console.log(w);
+    //console.log(w); //曜日を出力
 
 
 
@@ -132,8 +132,10 @@ function clock() {
             alert(`${data[time].lesson}時限目が${data[time].message}ました。`);
         else {
             alert(data[time].message);
-            if (data[time].lesson === 9) {
-                //音楽を再生する
+            if (data[time].lesson === 8) {
+                //蛍の光を18時までならす
+            } else {
+                // 18時になったので音楽を停止する
             }
         }
     }
