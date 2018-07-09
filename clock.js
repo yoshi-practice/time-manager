@@ -70,7 +70,7 @@ function clock() {
 
             case "09:45:00": //0限END・1限START
                 document.getElementById("Sound").play();
-                alert("1限目が始めりました。");
+                alert("1限目が始まりました。");
                 break;
 
             case "10:35:00": //1限END・休み時間START
