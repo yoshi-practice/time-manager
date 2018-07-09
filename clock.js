@@ -14,20 +14,6 @@ function clock() {
     var s = now.getSeconds();
 
 
-    var dayNames = [
-  'Sun',
-  'Mon',
-  'Thu',
-  'Wed',
-  'Thr',
-  'Fri',
-  'Sat'
-];
-
-    var day = now.getDay();
-    var dayName = dayNames[day];
-    //console.log(dayName); //曜日の出力
-
     if (mo < 10) {
         mo = "0" + mo
     };
@@ -67,13 +53,9 @@ function clock() {
     console.log(get_time); //時間のみ出力
 
 
-    function alart() {
-        document.getElementById("Sound").play();
-        break;
+    console.log(w);
 
-    }
-
-    if (dayName === "Sun" || dayName === "Sat") { // もし土曜日もしくは日曜日でないなら
+    if (w === "Sun" || w === "Sat") { // もし土曜日もしくは日曜日でないなら
         console.log("休日");
 
         // チャイムを作動させない
