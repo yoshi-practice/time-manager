@@ -6,6 +6,7 @@ body {
 }
 
 div#clock_frame {
+    padding-top: 0.5em;
     width: 100%;
 }
 
