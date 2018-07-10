@@ -3,7 +3,7 @@ setInterval(clock, 1000); //1秒ごとに結果を反映
 
 
 function clock() {
-    var weeks = new Array("Sun", "Mon", "Thu", "Wed", "Thr", "Fri", "Sat"); //曜日を出力
+    var weeks = new Array("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"); //曜日を出力
     var now = new Date();
     var y = now.getFullYear();
     var mo = now.getMonth() + 1;
@@ -12,9 +12,6 @@ function clock() {
     var h = now.getHours();
     var mi = now.getMinutes();
     var s = now.getSeconds();
-
-
-
 
 
     if (mo < 10) {
@@ -127,13 +124,14 @@ function clock() {
 
 
     if (time in data) {
-        document.getElementById("Sound").play();
+        document.getElementById("bell").play();
         if (data[time].lesson < 8)
             alert(`${data[time].lesson}時限目が${data[time].message}ました。`);
         else {
             alert(data[time].message);
             if (data[time].lesson === 8) {
                 //蛍の光を18時までならす
+                document.getElementById("auld_lang_syne").play(); //蛍の光
             } else {
                 // 18時になったので音楽を停止する
             }
