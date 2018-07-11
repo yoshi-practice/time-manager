@@ -21,6 +21,7 @@ span {
 span#clock_date {
     text-align: right;
     font-size: 0.5em;
+    padding-top: 0.5em;
     padding-right: 0.5em;
 }
 
