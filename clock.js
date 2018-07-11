@@ -38,16 +38,11 @@ function clock() {
     //var get_time = document.getElementById('clock_time'); // HTML要素オブジェクトを取得
     // console.log(get_time); //[object HTMLParagraphElement]  要素全てをログ出力？
 
-    var get_date = document.getElementById('clock_date').innerHTML;
-    //console.log(get_date); //日数のみ出力
-
-    var get_time = document.getElementById('clock_time').innerHTML;
-    //console.log(get_time); //時間のみ出力
+    var get_date = document.getElementById('clock_date').innerHTML, //console.log(get_date); //日数のみ出力
+        get_time = document.getElementById('clock_time').innerHTML; //console.log(get_time); //時間のみ出力
 
 
     //console.log(w); //曜日を出力
-
-
 
 
     const data = {
