@@ -1,7 +1,6 @@
 function clock() {
     "use strict";
 
-
     var bell = document.getElementById('bell'),
         auld_lang_syne = document.getElementById('auld_lang_syne'),
         weeks = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], //曜日を出力
@@ -13,9 +12,6 @@ function clock() {
         h = now.getHours(),
         mi = now.getMinutes(),
         s = now.getSeconds();
-
-
-
 
     if (mo < 10) {
         mo = "0" + mo;
@@ -30,11 +26,8 @@ function clock() {
         s = "0" + s;
     }
 
-
-
     var date = y + "/" + mo + "/" + d + " (" + w + ")",
         time = h + ":" + mi + ":" + s;
-
 
     document.getElementById("clock_date").innerHTML = y + "/" + mo + "/" + d + " (" + w + ")";
     document.getElementById("clock_time").innerHTML = h + ":" + mi + ":" + s;
@@ -48,6 +41,15 @@ function clock() {
 
 
     //console.log(w); //曜日を出力
+
+
+    var NOW = Math.floor(bell.currentTime);
+
+    //console.log(NOW);
+    if (NOW === 26) {
+        bell.pause();
+        bell.currentTime = 0;
+    }
 
 
     const data = {
@@ -125,15 +127,6 @@ function clock() {
 
     if (time in data) {
         bell.play();
-
-        bell.addEventListener("timeupdate", function () {
-            var NOW = Math.floor(TARGET.currentTime);
-
-            if (NOW === 26) {
-                bell.pause();
-                bell.currentTime = 0;
-            }
-        }, true);
 
         if (data[time].lesson < 8) {
             // alert(`${data[time].lesson}時限目が${data[time].message}ました。`);
