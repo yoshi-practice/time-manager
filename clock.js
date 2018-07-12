@@ -1,5 +1,7 @@
 function clock() {
     "use strict";
+
+
     var bell = document.getElementById('bell'),
         auld_lang_syne = document.getElementById('auld_lang_syne'),
         weeks = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], //曜日を出力
@@ -11,6 +13,9 @@ function clock() {
         h = now.getHours(),
         mi = now.getMinutes(),
         s = now.getSeconds();
+
+
+    bell.volume = 1.0;
 
     if (mo < 10) {
         mo = "0" + mo;
