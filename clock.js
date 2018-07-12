@@ -125,6 +125,16 @@ function clock() {
 
     if (time in data) {
         bell.play();
+
+        bell.addEventListener("timeupdate", function () {
+            var NOW = Math.floor(TARGET.currentTime);
+
+            if (NOW === 26) {
+                bell.pause();
+                bell.currentTime = 0;
+            }
+        }, true);
+
         if (data[time].lesson < 8) {
             // alert(`${data[time].lesson}時限目が${data[time].message}ました。`);
         } else {
