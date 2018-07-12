@@ -15,7 +15,7 @@ function clock() {
         s = now.getSeconds();
 
 
-    bell.volume = 1.0;
+
 
     if (mo < 10) {
         mo = "0" + mo;
