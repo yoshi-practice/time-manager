@@ -1,6 +1,6 @@
+"use strict";
 function clock() {
-    "use strict";
-
+    
     var bell = document.getElementById('bell'),
         auld_lang_syne = document.getElementById('auld_lang_syne'),
         weeks = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], //曜日を出力
@@ -11,7 +11,9 @@ function clock() {
         w = weeks[now.getDay()],
         h = now.getHours(),
         mi = now.getMinutes(),
-        s = now.getSeconds();
+        s = now.getSeconds(),
+        date,
+        time;
 
     // if (mo < 10) {
     //     mo = "0" + mo;
@@ -25,10 +27,6 @@ function clock() {
     // if (s < 10) {
     //     s = "0" + s;
     // }
-
-    var date,
-        time;
-
     function dateformat(y, mo, d, w) {
         var y0 = ("0000" + y).slice(-4);
         var mo0 = ("00" + mo).slice(-2);
@@ -58,10 +56,6 @@ function clock() {
 
     //var get_time = document.getElementById('clock_time'); // HTML要素オブジェクトを取得
     // console.log(get_time); //[object HTMLParagraphElement]  要素全てをログ出力
-
-    var get_date = document.getElementById('clock_date').innerHTML, //console.log(get_date); //日数のみ出力
-        get_time = document.getElementById('clock_time').innerHTML; //console.log(get_time); //時間のみ出力
-
 
     //console.log(w); //曜日を出力
 
