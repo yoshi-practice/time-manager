@@ -148,6 +148,50 @@ function clock() {
 
 
 
+    function notification() {
+        // Notification対応しているかどうか
+        if (window.Notification) {
+            // alert('Notificationは有効です');
+
+            // Permissionの確認
+            if (Notification.permission === 'granted') {
+
+                // 許可されている場合はNotificationで通知
+                // alert('通知許可されています');
+
+
+            } else if (Notification.permission === 'denied') {
+
+                // alert('通知拒否されています');
+
+            } else if (Notification.permission === 'default') {
+
+                // alert('通知可能か不明です');
+
+                // 許可が取れていない場合はNotificationの許可を取る
+                Notification.requestPermission(function (result) {
+                    if (result === 'denied') {
+
+                        // alert('リクエスト結果：通知許可されませんでした');
+
+                    } else if (result === 'default') {
+
+                        //     alert('リクエスト結果：通知可能か不明です');
+
+                    } else if (result === 'granted') {
+
+                        //     alert('リクエスト結果：通知許可されました！！');
+
+                    }
+                })
+            }
+        } else {
+            //alert('Notificationは無効です');
+        }
+
+    }
+
+    notification();
 
 
     if (time in data) {
@@ -155,19 +199,25 @@ function clock() {
 
         if (data[time].lesson < 8) {
             // alert(`${data[time].lesson}時限目が${data[time].message}ました。`);
+            var n = new Notification(`${data[time].lesson}時限目が${data[time].message}ました。`);
         } else {
             alert(data[time].message);
             if (data[time].lesson === 8) {
                 //蛍の光を18時までならす
                 auld_lang_syne.play(); //蛍の光
+                var n = new Notification(data[time].message);
             } else {
                 // 18時になったので音楽を停止する
+                var n = new Notification(data[time].message);
                 auld_lang_syne.pause();
                 auld_lang_syne.currentTime = 0;
             }
         }
     }
 }
+
+
+
 
 //setInterval(String,mmS) 1000mms = 1s
 setInterval(clock, 1000); //1秒ごとに結果を反映
