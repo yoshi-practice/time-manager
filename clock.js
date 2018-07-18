@@ -13,24 +13,48 @@ function clock() {
         mi = now.getMinutes(),
         s = now.getSeconds();
 
-    if (mo < 10) {
-        mo = "0" + mo;
-    }
-    if (d < 10) {
-        d = "0" + d;
-    }
-    if (mi < 10) {
-        mi = "0" + mi;
-    }
-    if (s < 10) {
-        s = "0" + s;
+    // if (mo < 10) {
+    //     mo = "0" + mo;
+    // }
+    // if (d < 10) {
+    //     d = "0" + d;
+    // }
+    // if (mi < 10) {
+    //     mi = "0" + mi;
+    // }
+    // if (s < 10) {
+    //     s = "0" + s;
+    // }
+
+    var date, 
+        time;
+        
+    function dateformat(y, mo, d, w){
+        var y =  ("0000" + y).slice(-4);
+        var mo = ("00" +  mo).slice(-2);
+        var d =  ("00" + d).slice(-2);
+        date = y + "/" + mo + "/" + d + " (" + w + ")";
+        return date;
     }
 
-    var date = y + "/" + mo + "/" + d + " (" + w + ")",
+    function timeformat(h, mi, s){
+        var h = ("00" + h).slice(-2);
+        var mi= ("00" + mi).slice(-2);
+        var s = ("00" + s).slice(-2);
         time = h + ":" + mi + ":" + s;
+        return time;
+    }
 
-    document.getElementById("clock_date").innerHTML = y + "/" + mo + "/" + d + " (" + w + ")";
-    document.getElementById("clock_time").innerHTML = h + ":" + mi + ":" + s;
+    dateformat(y, mo, d, w);
+    timeformat(h, mi, s);
+
+
+
+    // var date = y + "/" + mo + "/" + d + " (" + w + ")",
+    //     time = h + ":" + mi + ":" + s;
+
+    document.getElementById("clock_date").innerHTML = date;
+    document.getElementById("clock_time").innerHTML = time;
     document.getElementById("clock_frame").style.fontSize = window.innerWidth / 10 + "px";
 
     //var get_time = document.getElementById('clock_time'); // HTML要素オブジェクトを取得
