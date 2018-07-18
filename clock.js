@@ -26,28 +26,27 @@ function clock() {
     //     s = "0" + s;
     // }
 
-    var date, 
+    var date,
         time;
-        
-    function dateformat(y, mo, d, w){
-        var y =  ("0000" + y).slice(-4);
-        var mo = ("00" +  mo).slice(-2);
-        var d =  ("00" + d).slice(-2);
-        date = y + "/" + mo + "/" + d + " (" + w + ")";
+
+    function dateformat(y, mo, d, w) {
+        var y0 = ("0000" + y).slice(-4);
+        var mo0 = ("00" + mo).slice(-2);
+        var d0 = ("00" + d).slice(-2);
+        date = y0 + "/" + mo0 + "/" + d0 + " (" + w + ")";
         return date;
     }
 
-    function timeformat(h, mi, s){
-        var h = ("00" + h).slice(-2);
-        var mi= ("00" + mi).slice(-2);
-        var s = ("00" + s).slice(-2);
-        time = h + ":" + mi + ":" + s;
+    function timeformat(h, mi, s) {
+        var h0 = ("00" + h).slice(-2);
+        var mi0 = ("00" + mi).slice(-2);
+        var s0 = ("00" + s).slice(-2);
+        time = h0 + ":" + mi0 + ":" + s0;
         return time;
     }
 
     dateformat(y, mo, d, w);
     timeformat(h, mi, s);
-
 
 
     // var date = y + "/" + mo + "/" + d + " (" + w + ")",
@@ -146,6 +145,8 @@ function clock() {
             message: "下校する時間になりました。"
         }
     };
+
+
 
 
 
