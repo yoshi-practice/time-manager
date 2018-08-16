@@ -1,7 +1,8 @@
-"use strict";
+'use strict';
+
 function clock() {
 
-    let bell = document.getElementById('bell'),
+    var bell = document.getElementById('bell'),
         auld_lang_syne = document.getElementById('auld_lang_syne'),
         weeks = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], //曜日を出力
         now = new Date(),
@@ -22,23 +23,25 @@ function clock() {
     //     d = "0" + d;
     // }
     // if (mi < 10) {
-    //     mi = "0" + mi;
+    //     mi = "0" + mi;s
     // }
     // if (s < 10) {
     //     s = "0" + s;
     // }
+
+
     function dateformat(y, mo, d, w) {
-        let y0 = ("0000" + y).slice(-4);
-        let mo0 = ("00" + mo).slice(-2);
-        let d0 = ("00" + d).slice(-2);
+        var y0 = ("0000" + y).slice(-4),
+            mo0 = ("00" + mo).slice(-2),
+            d0 = ("00" + d).slice(-2);
         date = y0 + "/" + mo0 + "/" + d0 + " (" + w + ")";
         return date;
     }
 
     function timeformat(h, mi, s) {
-        let h0 = ("00" + h).slice(-2);
-        let mi0 = ("00" + mi).slice(-2);
-        let s0 = ("00" + s).slice(-2);
+        let h0 = ("00" + h).slice(-2),
+            mi0 = ("00" + mi).slice(-2),
+            s0 = ("00" + s).slice(-2);
         time = h0 + ":" + mi0 + ":" + s0;
         return time;
     }
@@ -163,43 +166,16 @@ function clock() {
 }
 
 function notification() {
-    // Notification対応しているかどうか
     if (window.Notification) {
-        // alert('Notificationは有効です');
-
         // Permissionの確認
-        if (Notification.permission === 'granted') {
-
-            // 許可されている場合はNotificationで通知
-            // alert('通知許可されています');
-
-
-        } else if (Notification.permission === 'denied') {
-
-            // alert('通知拒否されています');
-
-        } else if (Notification.permission === 'default') {
-
-            // alert('通知可能か不明です');
+        if (Notification.permission === 'granted') {} else if (Notification.permission === 'denied') {} else if (Notification.permission === 'default') {
             // 許可が取れていない場合はNotificationの許可を取る
             Notification.requestPermission(function (result) {
-                if (result === 'denied') {
-
-                    // alert('リクエスト結果：通知許可されませんでした');
-
-                } else if (result === 'default') {
-
-                    //     alert('リクエスト結果：通知可能か不明です');
-
-                } else if (result === 'granted') {
-
-                    //     alert('リクエスト結果：通知許可されました！！');
-
-                }
+                if (result === 'denied') {} else if (result === 'default') {} else if (result === 'granted') {}
             })
         }
     } else {
-        //alert('Notificationは無効です');
+        alert('通知が無効になっています');
     }
 
 }

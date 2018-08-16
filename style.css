@@ -1,83 +1,118 @@
-/*(@import url(http://fonts.googleapis.com/css?family=Aclonica);*/
+ /*(@import url(http://fonts.googleapis.com/css?family=Aclonica);*/
 
-body {
-    color: white;
-    background-color: black;
-}
+ body {
+     color: white;
+     background-color: black;
+ }
 
-div#clock_frame {
-    padding-top: 0.5em;
-    width: 100%;
-}
+ div#clock_frame {
+     padding-top: 0.5em;
+     /*    width: 100%;*/
+     float: left;
+ }
 
-span {
-    display: block;
-    float: right;
-    width: 90%;
-    font-family: cursive;
-    margin-right: 10px;
-}
+ div#time_table {
+     float: left;
+ }
 
-span#clock_date {
-    text-align: right;
-    font-size: 0.5em;
+ span {
+     display: block;
+     float: left;
+     width: 55%;
+     font-family: cursive;
+     /*        margin-right: 10px;*/
+ }
 
-    padding-right: 0.5em;
-}
+ span#clock_date {
+     text-align: right;
+     font-size: 0.4em;
+     padding-right: 0.5em;
+ }
 
-span#clock_time {
-    font-size: 2em;
-}
+ span#clock_time {
+     font-size: 1em;
+ }
 
-span#schedule {
-    font-size: 0.5em;
-    text-align: right;
-    padding-right: 0.5em;
-}
+ span#schedule {
+     font-size: 0.5em;
+     text-align: right;
+     /*     padding-right: 0.5em;*/
+ }
 
-/*table*/
+ /*table*/
 
-table {
-    margin: 0 auto;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border: 1px solid #666;
-    border-spacing: 0;
-    overflow: hidden;
-    width: 70%;
-}
-
-
-td,
-th {
-    border-bottom: 1px solid #666;
-    text-align: center;
-}
-
-td,
-th {
-    padding: 10px;
-    color: black;
-    font-size: 30%;
-}
-
-th {
-    background: #EFEFEF;
-}
-
-td {
-    background: #fff;
+ table {
+     margin: 0 auto;
+     border-radius: 5px;
+     -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+     border: 1px solid #666;
+     border-spacing: 0;
+     overflow: hidden;
+     width: 70%;
+ }
 
 
-}
+ td,
+ th {
+     border-bottom: 1px solid #666;
+     text-align: center;
+ }
 
-table tbody tr:last-child th,
-table tbody tr:last-child td {
-    border-bottom: none;
-}
+ td,
+ th {
+     padding: 10px;
+     color: black;
+     font-size: 30%;
+ }
 
-th + th,
-td {
-    border-left: 1px solid #666;
-}
+ th {
+     background: #EFEFEF;
+ }
+
+ td {
+     background: #fff;
+
+
+ }
+
+ table tbody tr:last-child th,
+ table tbody tr:last-child td {
+     border-bottom: none;
+ }
+
+ th + th,
+ td {
+     border-left: 1px solid #666;
+ }
+
+
+ @media screen and (min-width: 980px) {
+
+     .box {
+         overflow: hidden;
+     }
+
+
+
+ }
+
+ /* パソコン表示 */
+
+ @media screen and (min-width: 768px) and (max-width: 979px) {
+
+     div#clock_frame {
+         margin-top: 10vh;
+     }
+
+ }
+
+ /* タブレット端末表示 */
+
+ @media screen and (max-width: 479px) {
+     div#clock_frame {
+         margin-top: 10vh;
+     }
+ }
+
+ /* スマホ表示 */
