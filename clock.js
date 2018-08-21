@@ -30,6 +30,55 @@ function clock() {
     // }
 
 
+    var subject = {
+        "Mon": {
+            1: 0,
+            2: 0,
+            3: 0,
+            4: 0,
+            5: 0,
+            6: 0,
+            7: 0
+        },
+        "Tue": {
+            1: 0,
+            2: 0,
+            3: 0,
+            4: 0,
+            5: 0,
+            6: 0,
+            7: 0
+        },
+        "Wed": {
+            1: 0,
+            2: 0,
+            3: 0,
+            4: 0,
+            5: 0,
+            6: 0,
+            7: 0
+        },
+        "Thu": {
+            1: 0,
+            2: 0,
+            3: 0,
+            4: 0,
+            5: 0,
+            6: 0,
+            7: 0
+        },
+        "Fri": {
+            1: 0,
+            2: 0,
+            3: 0,
+            4: 0,
+            5: 0,
+            6: 0,
+            7: 0
+        }
+    };
+
+
     function dateformat(y, mo, d, w) {
         var y0 = ("0000" + y).slice(-4),
             mo0 = ("00" + mo).slice(-2),
@@ -55,6 +104,7 @@ function clock() {
 
     document.getElementById("clock_date").innerHTML = date;
     document.getElementById("clock_time").innerHTML = time;
+    //    document.getElementById("subject").innerHTML = "";
     document.getElementById("clock_frame").style.fontSize = window.innerWidth / 10 + "px";
 
     //let get_time = document.getElementById('clock_time'); // HTML要素オブジェクトを取得
@@ -163,6 +213,7 @@ function clock() {
             }
         }
     }
+
 }
 
 function notification() {
