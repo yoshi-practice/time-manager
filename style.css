@@ -9,7 +9,7 @@
  body {
      color: white;
      background-color: #9aa;
-     font-family: Myrica;
+     font-family: Myrica, "游ゴシック", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
  }
 
  div#clock_frame {
@@ -64,7 +64,7 @@
 
  td,
  th {
-     padding: 20px;
+/*     padding: 20px;*/
      color: black;
      font-size: 80%;
      font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
@@ -134,7 +134,7 @@
 
      }
      .popupModal1 > input:nth-child(1):checked + label + input:nth-child(3) + label + input:nth-child(5) + label {
-         left: 59% !important;
+         left: 55% !important;
          top: 50% !important;
          margin-left: 270px !important;
          margin-top: -310px !important;
@@ -245,27 +245,3 @@
      font-size: 14px;
      line-height: 1.8em;
  }
-
- .plan_name {
-     text-align: center;
-     width: 100%;
- }
-
- .input @media screen and (min-width: 980px) {
-     .box {
-         overflow: hidden;
-     }
-
- }
-
-
-
- /* パソコン表示 */
-
- @media screen and (min-width: 768px) and (max-width: 979px) {}
-
- /* タブレット端末表示 */
-
- @media screen and (max-width: 479px) {}
-
- /* スマホ表示 */
