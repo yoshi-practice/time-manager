@@ -11,17 +11,117 @@
 
 
 <body>
+    <label for="pop11" class="plan_name">バランスプラン時間割</label>
     <div class="box">
         <div id="clock_frame">
+
             <span id="clock_date"></span>
+
             <span id="clock_time"></span>
+
             <span id="subject"></span>
 
 
         </div>
-        <!--div id="time_table">
+
+
+        <div class="popupModal1">
+            <input type="radio" name="modalPop" id="pop11" />
+            <label for="pop11" class="plan_name"></label>
+            <input type="radio" name="modalPop" id="pop12" />
+            <label for="pop12">CLOSE</label>
+            <input type="radio" name="modalPop" id="pop13" />
+            <label for="pop13">×</label>
+            <div class="modalPopup2">
+                <div class="modalPopup3">
+                    <h2 class="modalTitle">バランスプラン時間割</h2>
+                    <div class="modalMain">
+                        <!--
+                        <p>世界中どこを探してもなかったので作りました。</p>
+                        <p>jsを使っていないのでコンフリクトすることはありません。</p>
+                        <p>スマホにも対応。iPhone4くらいの小さい画面でも大丈夫です。</p>
+                        <p>ただし、ポップアップが開いたあとにスマホでスクロールした場合、背景も動くのだけ悩みです</p>
+-->
+
+
+                        <!--全ての時間割-->
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th>月</th>
+                                <th>火</th>
+                                <th>水</th>
+                                <th>木</th>
+                                <th>金</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <td>プロジェクトN</td>
+                                <td>プロジェクトN</td>
+                                <td>プロジェクトN</td>
+                                <td>プロジェクトN</td>
+                                <td>プロジェクトN</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>プロジェクトN</td>
+                                <td>プロジェクトN</td>
+                                <td>プロジェクトN</td>
+                                <td>プロジェクトN</td>
+                                <td>プロジェクトN</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>Basic Program</td>
+                                <td>Basic Program</td>
+                                <td>Basic Program</td>
+                                <td>Basic Program</td>
+                                <td>Basic Program</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>大学受験・中学復習<br>or 中国語</td>
+                                <td>大学受験・中学復習</td>
+                                <td>大学受験・中学復習<br>or 英会話</td>
+                                <td>木4</td>
+                                <td>金4</td>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td>月5</td>
+                                <td>火5</td>
+                                <td>水5</td>
+                                <td>木5</td>
+                                <td>金5</td>
+                            </tr>
+                            <tr>
+                                <th>6</th>
+                                <td>月6</td>
+                                <td>火6</td>
+                                <td>水6</td>
+                                <td>木6</td>
+                                <td>金6</td>
+                            </tr>
+                            <tr>
+                                <th>7</th>
+                                <td>月7</td>
+                                <td>火7</td>
+                                <td>水7</td>
+                                <td>木7</td>
+                                <td>金7</td>
+                            </tr>
+                        </table>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!--div id="time_table">
             <!--全ての時間割-->
-        <!--table>
+            <!--table>
             <tr>
                 <th></th>
                 <th>月</th>
@@ -87,8 +187,8 @@
                 <td>金7</td>
             </tr>
         </table-->
-        <!--その日の時間割-->
-        <!--table>
+            <!--その日の時間割-->
+            <!--table>
 
                 <tr>
                     <th>1</th>
@@ -123,8 +223,9 @@
                     <td class="seven"><a>マイプロジェクト</a></td>
                 </tr>
                 <a>> 全ての時間割を見る</a>
-            </table>
-        </div-->
+            </table-->
+        </div>
+
     </div>
     <!--div id="sidebar">
         <p><a href="https://sites.google.com/nnn.ed.jp/nkou-students-shinsaibashi/?pli=1&authuser=1">心斎橋キャンパス掲示板</a></p>
