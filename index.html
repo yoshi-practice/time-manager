@@ -1,233 +1,211 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <link rel="icon" type="image/png" href="image/n.png">
     <meta charset="UTF-8">
-    <title>N</title>
+    <title>N Time manager</title>
     <link rel="stylesheet" href="style.css">
     <script src="clock.js"></script>
 </head>
 
-
 <body>
-    <label for="pop1" class="plan_name">バランスプラン時間割はこちら</label>
-
-    <div class="box">
-        <div id="clock_frame">
-
-            <span id="clock_date"></span>
-
-            <span id="clock_time"></span>
-
-            <span id="subject"></span>
-
-        </div>
-
-
-        <div class="popupModal1">
-            <input type="radio" name="modalPop" id="pop1" />
-            <label for="pop1" class="plan_name"></label>
-            <input type="radio" name="modalPop" id="pop2" />
-            <label for="pop2">CLOSE</label>
-            <input type="radio" name="modalPop" id="pop3" />
-            <label for="pop3">×</label>
-            <div class="modalPopup2">
-                <div class="modalPopup3">
-                    <h2 class="modalTitle">バランスプラン時間割</h2>
-                    <div class="modalMain">
-
-
-                        <!--全ての時間割-->
-                        <table>
-                            <tr>
-                                <th></th>
-                                <th>月</th>
-                                <th>火</th>
-                                <th>水</th>
-                                <th>木</th>
-                                <th>金</th>
-                            </tr>
-                            <tr>
-                                <th>0限</th>
-                                <td colspan="5">日誌</td>
-
-                            </tr>
-                            <tr>
-                                <th>1限</th>
-                                <td colspan="5" rowspan="2">プロジェクトN</td>
-
-                            </tr>
-                            <tr>
-                                <th>2限</th>
-                            </tr>
-                            <tr>
-                                <th>3限</th>
-                                <td colspan="5">Basic Program</td>
-
-                            </tr>
-                            <tr>
-                                <th>4限</th>
-                                <td>大学受験・中学復習<br>or 中国語</td>
-                                <td>大学受験・中学復習</td>
-                                <td>大学受験・中学復習<br>or 英会話</td>
-                                <td>プログラミング<br> or 中国語</td>
-                                <td>N予備校<br>or 進路学習</td>
-                            </tr>
-                            <tr>
-                                <th>5限</th>
-                                <td>プログラミング<br> or 中国語</td>
-                                <td>プログラミング</td>
-                                <td>大学受験・中学復習<br>or 英会話</td>
-                                <td>大学受験・中学復習<br>or 中国語</td>
-                                <td>プログラミング</td>
-                            </tr>
-                            <tr>
-                                <th>6限</th>
-                                <td>英語(英作文)<br>or 中国語</td>
-                                <td>英語(英作文)</td>
-                                <td>英語(多読)<br>or 英会話</td>
-                                <td>英語(英作文)<br>or 中国語</td>
-                                <td>プログラミング</td>
-                            </tr>
-                            <tr>
-                                <th>7限</th>
-                                <td>中国語<br>or 単語テスト<br>or 放課後</td>
-                                <td>グループ面談<br>or 放課後</td>
-                                <td>N高マイプロ<br>or 放課後</td>
-                                <td>中国語<br>or 単語テスト or 放課後</td>
-                                <td>グループ面談<br>or 放課後</td>
-                            </tr>
-                        </table>
-
-
-
-
-                    </div>
-                </div>
-            </div>
-
-            <!--div id="time_table">
-            <!--全ての時間割-->
-            <!--table>
-            <tr>
-                <th></th>
-                <th>月</th>
-                <th>火</th>
-                <th>水</th>
-                <th>木</th>
-                <th>金</th>
-            </tr>
-            <tr>
-                <th>1</th>
-                <td>月1</td>
-                <td>火1</td>
-                <td>水1</td>
-                <td>木1</td>
-                <td>金1</td>
-            </tr>
-            <tr>
-                <th>2</th>
-                <td>月2</td>
-                <td>火2</td>
-                <td>水2</td>
-                <td>木2</td>
-                <td>金2</td>
-            </tr>
-            <tr>
-                <th>3</th>
-                <td>月3</td>
-                <td>火3</td>
-                <td>水3</td>
-                <td>木3</td>
-                <td>金3</td>
-            </tr>
-            <tr>
-                <th>4</th>
-                <td>月4</td>
-                <td>火4</td>
-                <td>水4</td>
-                <td>木4</td>
-                <td>金4</td>
-            </tr>
-            <tr>
-                <th>5</th>
-                <td>月5</td>
-                <td>火5</td>
-                <td>水5</td>
-                <td>木5</td>
-                <td>金5</td>
-            </tr>
-            <tr>
-                <th>6</th>
-                <td>月6</td>
-                <td>火6</td>
-                <td>水6</td>
-                <td>木6</td>
-                <td>金6</td>
-            </tr>
-            <tr>
-                <th>7</th>
-                <td>月7</td>
-                <td>火7</td>
-                <td>水7</td>
-                <td>木7</td>
-                <td>金7</td>
-            </tr>
-        </table-->
-            <!--その日の時間割-->
-            <!--table>
-
-                <tr>
-                    <th>1</th>
-                    <td class="one"><a>プロジェクトN</a></td>
-
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <td class="two"><a>プロジェクトN</a></td>
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <td class="three"><a>スクーリング</a></td>
-                </tr>
-                <tr>
-                    <th>4</th>
-                    <td class="four"><a>プログラミング</a></td>
-                </tr>
-                <tr>
-                    <th>5</th>
-                    <td class="five"><a>大学受験・中学復習</a></td>
-                </tr>
-                <tr>
-
-                    <th>6</th>
-
-                    <td class="six"><a>英会話</a></td>
-
-                </tr>
-<tr>
-                    <th>7</th>
-                    <td class="seven"><a>マイプロジェクト</a></td>
-                </tr>
-                <a>> 全ての時間割を見る</a>
-            </table-->
-        </div>
-
+    <h1 class="title">N Time Manager</h1>
+    <div id="clock_frame">
+        <span id="clock_date"></span>
+        <span id="clock_time"></span>
+        <span id="subject"></span>
     </div>
-    <!--div id="sidebar">
-        <p><a href="https://sites.google.com/nnn.ed.jp/nkou-students-shinsaibashi/?pli=1&authuser=1">心斎橋キャンパス掲示板</a></p>
-        <p><a href="https://www.nnn.ed.nico/">N予備校・ベーシックプログラム</a></p>
-        <p><a href="https://classroom.google.com/u/1/h">google classroom</a></p>
-      </div-->
+    <p class="time_title">心斎橋キャンパス 時間割</p>
+    <p class="button"> <a href="#popup1">Weekday Course(週5)</a> ｜ <a href="#popup2">3 Days Course(週3)</a> ｜ <a href="#popup3">1 Day Course(週1)</a></p>
 
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Weekday Course(週5)</h2>
+            <table>
+                <tr>
+                    <th class="hour"></th>
+                    <th class="week">月</th>
+                    <th class="week">火</th>
+                    <th class="week">水</th>
+                    <th class="week">木</th>
+                    <th class="week">金</th>
+                </tr>
+
+                <tr>
+                    <th class="hour">1</th>
+                    <td colspan="5" rowspan="2">プロジェクトN</td>
+
+                </tr>
+                <tr>
+                    <th class="hour">2</th>
+                </tr>
+                <tr>
+                    <th class="hour">3</th>
+                    <td colspan="5">Basic Program</td>
+
+
+
+                </tr>
+                <tr>
+                    <th class="hour">4</th>
+                    <td>大学受験・中学復習<br>or 中国語</td>
+                    <td>大学受験・中学復習</td>
+                    <td>大学受験・中学復習<br>or 英会話</td>
+                    <td>プログラミング<br> or 中国語</td>
+                    <td>N予備校<br>or 進路学習</td>
+                </tr>
+                <tr>
+                    <th class="hour">5</th>
+                    <td>プログラミング<br> or 中国語</td>
+                    <td>プログラミング</td>
+                    <td>大学受験・中学復習<br>or 英会話</td>
+                    <td>大学受験・中学復習<br>or 中国語</td>
+                    <td>プログラミング</td>
+                </tr>
+                <tr>
+                    <th class="hour">6</th>
+                    <td>英語(英作文)<br>or 中国語</td>
+                    <td>英語(英作文)</td>
+                    <td><a href="https://classroom.google.com/">英語(多読)</a><br>or 英会話</td>
+                    <td>英語(英作文)<br>or 中国語</td>
+                    <td>プログラミング</td>
+                </tr>
+                <tr>
+                    <th class="hour">7</th>
+                    <td>中国語<br>or <a href="https://classroom.google.com/">単語テスト</a><br>or 放課後</td>
+                    <td>グループ面談<br>or 放課後</td>
+                    <td>N高マイプロ<br>or 放課後</td>
+                    <td>中国語<br>or <a href="https://classroom.google.com/">単語テスト</a> <br>or 放課後</td>
+                    <td>グループ面談<br>or 放課後</td>
+                </tr>
+            </table>
+
+            <a class="close" href="#">&times;</a>
+
+        </div>
+    </div>
+    <div id="popup2" class="overlay">
+
+        <div class="popup">
+            <h2>3 Day Course(週3)</h2>
+
+            <table>
+                <tr>
+                    <th class="hour"></th>
+
+                    <th class="week">月</th>
+                    <th class="week">火</th>
+                    <th class="week">水</th>
+                    <th class="week">木</th>
+                    <th class="week">金</th>
+                </tr>
+                <tr>
+                    <th class="hour">1</th>
+                    <td rowspan="2">プロジェクトN</td>
+                    <td rowspan="7">休み</td>
+                    <td rowspan="2">プロジェクトN</td>
+                    <td rowspan="7">休み</td>
+                    <td rowspan="2">プロジェクトN</td>
+                </tr>
+                <tr>
+                    <th class="hour">2</th>
+                </tr>
+                <tr>
+                    <th class="hour">3</th>
+                    <td>Basic Program</td>
+                    <td>Basic Program</td>
+                    <td>Basic Program</td>
+
+                </tr>
+                <tr>
+                    <th class="hour">4</th>
+                    <td>大学受験・中学復習<br>or 中国語</td>
+
+                    <td>大学受験・中学復習<br>or 英会話</td>
+
+                    <td>N予備校<br>or 進路学習</td>
+                </tr>
+                <tr>
+                    <th class="hour">5</th>
+                    <td>プログラミング<br> or 中国語</td>
+                    <td>大学受験・中学復習<br>or 英会話</td>
+                    <td>プログラミング</td>
+                </tr>
+                <tr>
+                    <th class="hour">6</th>
+                    <td>英語(英作文)<br>or 中国語</td>
+                    <td><a href="https://classroom.google.com/">英語(多読)</a><br>or 英会話</td>
+                    <td>プログラミング</td>
+                </tr>
+                <tr>
+                    <th class="hour">7</th>
+                    <td>中国語<br>or <a href="https://classroom.google.com/">単語テスト</a><br>or 放課後</td>
+                    <td>N高マイプロ<br>or 放課後</td>
+                    <td>グループ面談<br>or 放課後</td>
+                </tr>
+            </table>
+
+            <a class="close" href="#">&times;</a>
+
+        </div>
+    </div>
+    <div id="popup3" class="overlay">
+
+        <div class="popup">
+            <h2>1 Day Course(週1)</h2>
+
+            <table>
+                <tr>
+                    <th class="hour"></th>
+
+                    <th class="week">月</th>
+                    <th class="week">火</th>
+                    <th class="week">水</th>
+                    <th class="week">木</th>
+                    <th class="week">金</th>
+                </tr>
+
+                <tr>
+                    <th class="hour">1</th>
+                    <td rowspan="7">休み</td>
+                    <td rowspan="7">休み</td>
+                    <td rowspan="7">休み</td>
+                    <td rowspan="2">プロジェクトN</td>
+                    <td rowspan="7">休み</td>
+                </tr>
+                <tr>
+                    <th class="hour">2</th>
+                </tr>
+                <tr>
+                    <th class="hour">3</th>
+                    <td>Basic Program</td>
+
+                </tr>
+                <tr>
+                    <th class="hour">4</th>
+                    <td>basic Program<br>or 中国語</td>
+                </tr>
+                <tr>
+                    <th class="hour">5</th>
+                    <td>大学受験・中学復習</td>
+                </tr>
+                <tr>
+                    <th class="hour">6</th>
+                    <td>英語(英作文)</td>
+                </tr>
+                <tr>
+                    <th class="hour">7</th>
+                    <td>中国語<br>or <a href="https://classroom.google.com/">単語テスト</a> <br>or 放課後</td>
+                </tr>
+            </table>
+            <a class="close" href="#">&times;</a>
+        </div>
+    </div>
     <audio id="bell" auto>
    <source src="sound/bell.mp3" type="audio/mp3">
 </audio>
-
     <audio id="auld_lang_syne" loop auto>
-  <source src="sound/auld_lang_syne.mp3" type="audio/mp3">
+    <source src="sound/auld_lang_syne.mp3" type="audio/mp3">
 </audio>
 </body>
-
 </html>
